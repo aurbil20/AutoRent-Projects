@@ -73,19 +73,17 @@
 
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
-            <a href="index.html" class="navbar-brand d-flex align-items-center">
-                <h1 class="m-0">
-                    <img class="img-fluid me-3" src="{{ asset('img/icon/icon-02-primary.png') }}" alt="" />Insure
-                </h1>
+            <a href="{{ Route('home') }}" class="navbar-brand d-flex align-items-center">
+                <img class="img-fluid me-3" src="{{ asset('img/icon/icon-02-primary.png') }}" alt="" />
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
-                    <a href="#" class="nav-item nav-link active">Accueil</a>
-                    <a href="#" class="nav-item nav-link">Notre catalogue</a>
-                    <a href="#" class="nav-item nav-link">Nous contacter</a>
+                    <a href="{{ Route('home') }}" class="nav-item nav-link active">Accueil</a>
+                    <a href="{{ Route('catalogue') }}" class="nav-item nav-link">Notre catalogue</a>
+                    <a href="#contact-us" class="nav-item nav-link">Nous contacter</a>
                 </div>
             </div>
             <div class="nav-item dropdown">
@@ -95,7 +93,7 @@
                     <a href="#" class="dropdown-item">Modifier ma réservation</a>
                 </div>
             </div>
-            <a href="" class="btn btn-primary px-3 d-none d-lg-block">Se connecter</a>
+            <a href="{{ Route('login') }}" class="btn btn-primary px-3 d-none d-lg-block">Se connecter</a>
         </nav>
         <!-- Navbar End -->
     </header>
@@ -137,9 +135,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h5 class="text-light mb-4">Quick Links</h5>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Our Services</a>
+                        <a class="btn btn-link" href="#about-us">About Us</a>
+                        <a class="btn btn-link" href="#contact-us">Contact Us</a>
+                        <a class="btn btn-link" href="#service">Our Services</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>
                         <a class="btn btn-link" href="">Support</a>
                     </div>
@@ -183,7 +181,8 @@
     <script src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/myscript.js') }}"></script>
 </body>
 
 </html>
